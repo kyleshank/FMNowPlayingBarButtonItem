@@ -6,9 +6,19 @@
 
 ## Usage
 
+![FMNowPlayingBarButtonItem](screenshot.jpg)
+
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+Import the category into your UIViewController:
+
+    #import <FMNowPlayingBarButtonItem/UIViewController+FMNowPlayingBarButtonItem.h>
+    
+Then add the Now Playing button to your NavigationBar:
+
+    self.navigationItem.rightBarButtonItem = [self nowPlayingButton:self action:@selector(nowPlaying:)];
+    
+The method `nowPlayingButton` takes a target and a selector to call for when the Now Playing button is tapped.
 
 ## Installation
 
